@@ -3,76 +3,58 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sarfaraz Ahmed — PhD Applicant</title>
+<title>PhD Portfolio — Sarfaraz Ahmed</title>
 <meta name="description" content="Portfolio and CV of Sarfaraz Ahmed — PhD applicant in intelligent, secure, and sustainable computing systems." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fff;
-    --ink:#1f2937;
-    --muted:#6b7280;
-    --line:#e5e7eb;
-    --brand:#0b6efd;
-    --brand-2:#0a58ca;
-    --panel:#fafafa;
-    --card:#fff;
+    --bg:#fff; --ink:#1f2937; --muted:#6b7280; --line:#e5e7eb; --brand:#0b6efd; --brand-2:#0a58ca; --panel:#fafafa; --card:#fff; --head:#000; --headText:#fff;
   }
   *{box-sizing:border-box}
   html,body{height:100%}
   html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-    color:var(--ink);
-    background:var(--bg);
-    font-size:16px; /* medium */
-    line-height:1.55;
-  }
+  body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; color:var(--ink); background:var(--bg); font-size:16px; line-height:1.55;}
   a{color:var(--brand); text-decoration:none}
   a:hover{color:var(--brand-2); text-decoration:underline}
 
-  /* ===== Layout (two columns, left sticky profile) ===== */
-  .wrap{max-width:1200px; margin:0 auto; padding:24px 18px}
-  .grid{display:grid; grid-template-columns:320px 1fr; gap:28px}
+  /* ===== Layout (left-aligned, not centered) ===== */
+  .wrap{max-width:1200px; margin-left:18px; margin-right:0; padding:20px 18px}
+  .grid{display:grid; grid-template-columns:320px 1fr; gap:24px}
   @media (max-width:1000px){ .grid{grid-template-columns:1fr} .left{position:relative !important} }
   .left{position:sticky; top:20px; height:fit-content; align-self:start}
   .right{min-width:0}
 
   /* ===== Left profile ===== */
   .card{background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 1px 2px rgba(0,0,0,.03)}
-  .profile{padding:18px}
-  .head{
-    display:grid; grid-template-columns:84px 1fr; gap:14px; align-items:center;
-  }
-  .avatar{
-    width:84px; height:84px; border-radius:12px; background:#f3f4f6; border:1px solid var(--line);
-    display:grid; place-items:center; overflow:hidden;
-  }
+  .profile{padding:16px}
+  .head{display:grid; grid-template-columns:72px 1fr; gap:12px; align-items:center}
+  .avatar{width:72px; height:72px; border-radius:12px; background:#f3f4f6; border:1px solid var(--line); display:grid; place-items:center; overflow:hidden}
   .avatar img{width:100%; height:100%; object-fit:cover}
-  h1{
-    margin:0 0 2px; font-size:26px; line-height:1.15; font-family:Merriweather, serif; letter-spacing:.2px;
-  }
+  /* Removed large visible name, keep for screen readers only */
+  .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
   .tagline{color:var(--muted); font-weight:500}
-  .meta{margin-top:12px; color:var(--muted); font-size:14px}
+  .meta{margin-top:10px; color:var(--muted); font-size:14px}
   .meta div{margin:4px 0}
-  .links{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+  .links{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
   .chip{font-size:12px; border:1px solid var(--line); padding:6px 8px; border-radius:999px; background:#fff; color:#374151}
 
-  .nav{
-    margin-top:14px; padding:10px; background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); border-radius:10px;
-    display:flex; flex-direction:column; gap:6px;
-  }
+  .nav{margin-top:12px; padding:10px; background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); border-radius:10px; display:flex; flex-direction:column; gap:6px}
   .nav a{padding:6px 8px; border-radius:8px; color:#374151}
   .nav a:hover{background:#eef2ff; text-decoration:none}
 
+  .cvbox{margin-top:12px; padding:10px; background:var(--panel); border:1px solid var(--line); border-radius:10px}
+  .cvbox label{font-weight:600; font-size:14px}
+  .cvbox input{margin-top:6px}
+  .cvbox .note{font-size:12px; color:var(--muted); margin-top:6px}
+
   /* ===== Right content ===== */
-  section{padding:14px 18px; border:1px solid var(--line); border-radius:12px; background:#fff; margin-bottom:16px}
-  .st{display:flex; align-items:baseline; gap:10px; margin:0 0 10px}
-  .st .kicker{display:inline-block; width:5px; height:16px; background:var(--brand); border-radius:4px}
-  .st h2{margin:0; font-size:19px; letter-spacing:.2px; font-weight:700}
-  .blurb{color:#374151; margin:6px 0 2px}
+  section{padding:0; border:1px solid var(--line); border-radius:12px; background:#fff; margin-bottom:14px; overflow:hidden}
+  /* Black header bars for each section title */
+  .section-head{background:var(--head); color:var(--headText); padding:10px 14px}
+  .section-head h2{margin:0; font-size:18px; letter-spacing:.2px}
+  .section-body{padding:12px 14px}
 
   .item{display:grid; grid-template-columns:120px 1fr; gap:12px; padding:8px 0}
   .when{color:var(--muted); font-size:12.5px}
@@ -81,28 +63,27 @@
   .muted{color:var(--muted)}
   .tight p{margin:2px 0}
 
-  /* Dense multi-col grids to see more at once */
   .cols-2{display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
   .cols-3{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
   @media (max-width:1000px){ .cols-2{grid-template-columns:1fr} .cols-3{grid-template-columns:1fr 1fr} }
   @media (max-width:640px){ .cols-3{grid-template-columns:1fr} .item{grid-template-columns:1fr} }
 
-  footer{margin:18px 0 6px; color:var(--muted); font-size:14px; text-align:center}
+  footer{margin:18px 0 6px; color:var(--muted); font-size:14px}
 </style>
 </head>
 <body>
   <div class="wrap">
     <div class="grid">
-      <!-- LEFT: sticky profile -->
+      <!-- LEFT: sticky profile (no big visible name) -->
       <aside class="left card profile">
         <div class="head">
-          <div class="avatar">
+          <div class="avatar" aria-hidden="true">
             <!-- Optional headshot -->
-            <!-- <img src="headshot.jpg" alt="Sarfaraz Ahmed"> -->
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0b6efd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20a6 6 0 0 1 12 0"/></svg>
+            <!-- <img src="headshot.jpg" alt=""> -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#0b6efd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20a6 6 0 0 1 12 0"/></svg>
           </div>
           <div>
-            <h1 id="name">Sarfaraz Ahmed</h1>
+            <h1 class="sr-only" id="sr-name">Sarfaraz Ahmed</h1>
             <div class="tagline" id="tagline">Prospective PhD Student — Intelligent, Secure & Sustainable Computing Systems</div>
           </div>
         </div>
@@ -114,10 +95,17 @@
         </div>
 
         <div class="links">
-          <!-- Add your links as chips if you like -->
-          <!-- <a class="chip" href="https://linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a> -->
-          <!-- <a class="chip" href="https://github.com/..." target="_blank" rel="noopener">GitHub</a> -->
-          <!-- <a class="chip" href="https://scholar.google.com/..." target="_blank" rel="noopener">Google Scholar</a> -->
+          <!-- Optional profile links -->
+          <!-- <a class="chip" href="https://linkedin.com/in/.." target="_blank" rel="noopener">LinkedIn</a> -->
+          <!-- <a class="chip" href="https://github.com/.." target="_blank" rel="noopener">GitHub</a> -->
+          <!-- <a class="chip" href="https://scholar.google.com/.." target="_blank" rel="noopener">Google Scholar</a> -->
+        </div>
+
+        <div class="cvbox">
+          <label for="cvUpload">Upload CV (PDF)</label>
+          <input id="cvUpload" type="file" accept="application/pdf" />
+          <div class="note">This creates a <em>local</em> preview link only. To persist on your site, add a <code>cv.pdf</code> file to this repo and I’ll auto-link it.</div>
+          <div id="cvLink" class="note" style="display:none; margin-top:6px"></div>
         </div>
 
         <nav class="nav" id="toc">
@@ -137,19 +125,21 @@
       <main class="right">
 
         <section id="research">
-          <div class="st"><span class="kicker"></span><h2>Research Interest</h2></div>
-          <p class="blurb">My research focuses on the development of intelligent, secure, and sustainable computing systems for reliable and high-performance digital infrastructures.</p>
-          <div class="tight">
-            <p>• Systems & Application Security</p>
-            <p>• Advanced Networking and Data Security</p>
-            <p>• Intelligent and Sustainable Computing Systems</p>
-            <p>• Security & Privacy in Distributed Environments</p>
+          <div class="section-head"><h2>Research Interest</h2></div>
+          <div class="section-body">
+            <p class="blurb">My research focuses on the development of intelligent, secure, and sustainable computing systems for reliable and high-performance digital infrastructures.</p>
+            <div class="tight">
+              <p>• Systems & Application Security</p>
+              <p>• Advanced Networking and Data Security</p>
+              <p>• Intelligent and Sustainable Computing Systems</p>
+              <p>• Security & Privacy in Distributed Environments</p>
+            </div>
           </div>
         </section>
 
         <section id="education">
-          <div class="st"><span class="kicker"></span><h2>Education</h2></div>
-          <div class="tight">
+          <div class="section-head"><h2>Education</h2></div>
+          <div class="section-body">
             <div class="item">
               <div class="when">Feb 2026</div>
               <div class="what">
@@ -170,8 +160,8 @@
         </section>
 
         <section id="experience">
-          <div class="st"><span class="kicker"></span><h2>Experience</h2></div>
-          <div class="tight">
+          <div class="section-head"><h2>Experience</h2></div>
+          <div class="section-body">
             <div class="item">
               <div class="when">Jul 2025 – Sep 2025</div>
               <div class="what">
@@ -190,8 +180,8 @@
         </section>
 
         <section id="publications">
-          <div class="st"><span class="kicker"></span><h2>Publications & Writing</h2></div>
-          <div class="tight">
+          <div class="section-head"><h2>Publications & Writing</h2></div>
+          <div class="section-body">
             <div class="item">
               <div class="when">2025</div>
               <div class="what">
@@ -203,35 +193,17 @@
         </section>
 
         <section id="awards">
-          <div class="st"><span class="kicker"></span><h2>Honors & Awards</h2></div>
-          <div class="cols-2">
-            <div class="item">
-              <div class="when">2025</div>
-              <div class="what">
-                <div class="title">Dean’s List 2024–2025</div>
-                <div class="muted">University of the People, USA</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">2023</div>
-              <div class="what">
-                <div class="title">President’s List 2023</div>
-                <div class="muted">University of the People, USA</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">Apr 2024</div>
-              <div class="what">
-                <div class="title">Aspire Leaders Program (Global Leadership)</div>
-                <div class="muted">Harvard Business School, USA</div>
-              </div>
-            </div>
+          <div class="section-head"><h2>Honors & Awards</h2></div>
+          <div class="section-body cols-2">
+            <div class="item"><div class="when">2025</div><div class="what"><div class="title">Dean’s List 2024–2025</div><div class="muted">University of the People, USA</div></div></div>
+            <div class="item"><div class="when">2023</div><div class="what"><div class="title">President’s List 2023</div><div class="muted">University of the People, USA</div></div></div>
+            <div class="item"><div class="when">Apr 2024</div><div class="what"><div class="title">Aspire Leaders Program (Global Leadership)</div><div class="muted">Harvard Business School, USA</div></div></div>
           </div>
         </section>
 
         <section id="training">
-          <div class="st"><span class="kicker"></span><h2>Professional Development & Training</h2></div>
-          <div class="cols-2">
+          <div class="section-head"><h2>Professional Development & Training</h2></div>
+          <div class="section-body cols-2">
             <div class="item"><div class="when">Apr–Jun 2025</div><div class="what"><div class="title">CS106A Programming Methodologies</div><div class="muted">Stanford — Code in Place</div></div></div>
             <div class="item"><div class="when">Jan–Mar 2025</div><div class="what"><div class="title">Introduction to Kubernetes (LFS158)</div><div class="muted">Linux Foundation</div></div></div>
             <div class="item"><div class="when">Jul–Nov 2024</div><div class="what"><div class="title">IBM Cloud Essentials</div><div class="muted">edX</div></div></div>
@@ -244,28 +216,16 @@
         </section>
 
         <section id="community">
-          <div class="st"><span class="kicker"></span><h2>Community Service</h2></div>
-          <div class="cols-2">
-            <div class="item">
-              <div class="when">2024–Present</div>
-              <div class="what">
-                <div class="title">Community Leader (Pakistan)</div>
-                <div class="muted">Aspire Institute — Harvard University</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">2023–Present</div>
-              <div class="what">
-                <div class="title">Volunteer</div>
-                <div class="muted">International Humanitarian Aid Association (IHAA), Turkey</div>
-              </div>
-            </div>
+          <div class="section-head"><h2>Community Service</h2></div>
+          <div class="section-body cols-2">
+            <div class="item"><div class="when">2024–Present</div><div class="what"><div class="title">Community Leader (Pakistan)</div><div class="muted">Aspire Institute — Harvard University</div></div></div>
+            <div class="item"><div class="when">2023–Present</div><div class="what"><div class="title">Volunteer</div><div class="muted">International Humanitarian Aid Association (IHAA), Turkey</div></div></div>
           </div>
         </section>
 
         <section id="skills">
-          <div class="st"><span class="kicker"></span><h2>Skills</h2></div>
-          <div class="cols-3">
+          <div class="section-head"><h2>Skills</h2></div>
+          <div class="section-body cols-3">
             <div class="item"><div class="when"></div><div class="what"><div class="title">Programming</div><div class="muted">C++, Python, MATLAB, SQL, JavaScript, HTML, CSS, PHP, Go, Java, Bash, C</div></div></div>
             <div class="item"><div class="when"></div><div class="what"><div class="title">Machine Learning & Data</div><div class="muted">TensorFlow, NumPy, Pandas, Scikit-learn, MATLAB Toolboxes</div></div></div>
             <div class="item"><div class="when"></div><div class="what"><div class="title">DevOps & Systems</div><div class="muted">Linux/Unix, GitHub, CI/CD, Shell Scripting, API Integration</div></div></div>
@@ -275,18 +235,38 @@
         </section>
 
         <section id="contact">
-          <div class="st"><span class="kicker"></span><h2>Contact</h2></div>
-          <p class="tight">
-            <strong>Email:</strong> <a href="mailto:space.sarfaraz216@gmail.com">space.sarfaraz216@gmail.com</a><br/>
+          <div class="section-head"><h2>Contact</h2></div>
+          <div class="section-body">
+            <p class="tight"><strong>Email:</strong> <a href="mailto:space.sarfaraz216@gmail.com">space.sarfaraz216@gmail.com</a><br/>
             <strong>Phone:</strong> +92-319-4503446<br/>
-            <strong>Location:</strong> Sindh, Pakistan
-          </p>
+            <strong>Location:</strong> Sindh, Pakistan</p>
+            <p class="tight" id="cvHosted" style="margin-top:8px"></p>
+          </div>
         </section>
 
         <footer>© <span id="year"></span> Sarfaraz Ahmed</footer>
       </main>
     </div>
   </div>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+  // Year
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // CV upload (local preview only)
+  const up=document.getElementById('cvUpload');
+  const linkBox=document.getElementById('cvLink');
+  if(up){
+    up.addEventListener('change', e=>{
+      const f=e.target.files&&e.target.files[0];
+      if(!f) return;
+      if(f.type!=="application/pdf"){ linkBox.style.display='block'; linkBox.textContent='Please select a PDF file.'; return; }
+      const url=URL.createObjectURL(f);
+      linkBox.style.display='block';
+      linkBox.innerHTML = 'Local CV link: <a href="'+url+'" target="_blank" rel="noopener">Open your CV</a> (not saved online)';
+    });
+  }
+  // If a persistent cv.pdf exists in repo root, show link automatically
+  fetch('cv.pdf',{method:'HEAD'}).then(r=>{ if(r.ok){ document.getElementById('cvHosted').innerHTML='Download CV: <a href="cv.pdf" target="_blank" rel="noopener">cv.pdf</a>'; }}).catch(()=>{});
+</script>
 </body>
 </html>
