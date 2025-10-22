@@ -1,292 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sarfaraz Ahmed — PhD Applicant</title>
-<meta name="description" content="Portfolio and CV of Sarfaraz Ahmed — PhD applicant in intelligent, secure, and sustainable computing systems." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#fff;
-    --ink:#1f2937;
-    --muted:#6b7280;
-    --line:#e5e7eb;
-    --brand:#0b6efd;
-    --brand-2:#0a58ca;
-    --panel:#fafafa;
-    --card:#fff;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-    color:var(--ink);
-    background:var(--bg);
-    font-size:16px; /* medium */
-    line-height:1.55;
-  }
-  a{color:var(--brand); text-decoration:none}
-  a:hover{color:var(--brand-2); text-decoration:underline}
+# Sarfaraz Ahmed — PhD Applicant Portfolio
 
-  /* ===== Layout (two columns, left sticky profile) ===== */
-  .wrap{max-width:1200px; margin:0 auto; padding:24px 18px}
-  .grid{display:grid; grid-template-columns:320px 1fr; gap:28px}
-  @media (max-width:1000px){ .grid{grid-template-columns:1fr} .left{position:relative !important} }
-  .left{position:sticky; top:20px; height:fit-content; align-self:start}
-  .right{min-width:0}
+Welcome to my personal academic and research portfolio.  
+I focus on **intelligent, secure, and sustainable computing systems** for reliable and high-performance digital infrastructures.  
+This repository hosts my GitHub Pages website and public academic materials.
 
-  /* ===== Left profile ===== */
-  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 1px 2px rgba(0,0,0,.03)}
-  .profile{padding:18px}
-  .head{
-    display:grid; grid-template-columns:84px 1fr; gap:14px; align-items:center;
-  }
-  .avatar{
-    width:84px; height:84px; border-radius:12px; background:#f3f4f6; border:1px solid var(--line);
-    display:grid; place-items:center; overflow:hidden;
-  }
-  .avatar img{width:100%; height:100%; object-fit:cover}
-  h1{
-    margin:0 0 2px; font-size:26px; line-height:1.15; font-family:Merriweather, serif; letter-spacing:.2px;
-  }
-  .tagline{color:var(--muted); font-weight:500}
-  .meta{margin-top:12px; color:var(--muted); font-size:14px}
-  .meta div{margin:4px 0}
-  .links{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-  .chip{font-size:12px; border:1px solid var(--line); padding:6px 8px; border-radius:999px; background:#fff; color:#374151}
+---
 
-  .nav{
-    margin-top:14px; padding:10px; background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line); border-radius:10px;
-    display:flex; flex-direction:column; gap:6px;
-  }
-  .nav a{padding:6px 8px; border-radius:8px; color:#374151}
-  .nav a:hover{background:#eef2ff; text-decoration:none}
+## 🎓 About Me
+I hold a **B.S. in Computer Science** from the *University of the People, USA (CGPA 3.72/4)*  
+with a major in **Systems & Application Security** and **Advanced Networking & Data Security**.  
+I have hands-on experience in **DevOps**, **machine learning**, and **applied data systems**,  
+with professional exposure through research and internships at **NUST** and **NSTP Islamabad**.
 
-  /* ===== Right content ===== */
-  section{padding:14px 18px; border:1px solid var(--line); border-radius:12px; background:#fff; margin-bottom:16px}
-  .st{display:flex; align-items:baseline; gap:10px; margin:0 0 10px}
-  .st .kicker{display:inline-block; width:5px; height:16px; background:var(--brand); border-radius:4px}
-  .st h2{margin:0; font-size:19px; letter-spacing:.2px; font-weight:700}
-  .blurb{color:#374151; margin:6px 0 2px}
+My long-term research interests include:
+- Secure distributed computing and intelligent systems  
+- Energy-aware and sustainable digital infrastructure  
+- Data privacy, trust, and system dependability  
 
-  .item{display:grid; grid-template-columns:120px 1fr; gap:12px; padding:8px 0}
-  .when{color:var(--muted); font-size:12.5px}
-  .what{display:flex; flex-direction:column; gap:2px}
-  .title{font-weight:600}
-  .muted{color:var(--muted)}
-  .tight p{margin:2px 0}
+---
 
-  /* Dense multi-col grids to see more at once */
-  .cols-2{display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
-  .cols-3{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
-  @media (max-width:1000px){ .cols-2{grid-template-columns:1fr} .cols-3{grid-template-columns:1fr 1fr} }
-  @media (max-width:640px){ .cols-3{grid-template-columns:1fr} .item{grid-template-columns:1fr} }
+## 🔬 Research & Development
+- **Flexible AI-driven Security Systems** — explored ML models to improve cyber-physical system resilience.  
+- **Cloud-Native Automation Pipelines** — implemented scalable CI/CD architecture for distributed applications.  
+- **Applied Machine Learning for Intelligent Systems** — built and evaluated deep learning models with TensorFlow & Scikit-learn.
 
-  footer{margin:18px 0 6px; color:var(--muted); font-size:14px; text-align:center}
-</style>
-</head>
-<body>
-  <div class="wrap">
-    <div class="grid">
-      <!-- LEFT: sticky profile -->
-      <aside class="left card profile">
-        <div class="head">
-          <div class="avatar">
-            <!-- Optional headshot -->
-            <!-- <img src="headshot.jpg" alt="Sarfaraz Ahmed"> -->
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0b6efd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20a6 6 0 0 1 12 0"/></svg>
-          </div>
-          <div>
-            <h1 id="name">Sarfaraz Ahmed</h1>
-            <div class="tagline" id="tagline">Prospective PhD Student — Intelligent, Secure & Sustainable Computing Systems</div>
-          </div>
-        </div>
+---
 
-        <div class="meta">
-          <div id="email"><strong>Email:</strong> <a href="mailto:space.sarfaraz216@gmail.com">space.sarfaraz216@gmail.com</a></div>
-          <div id="phone"><strong>Phone:</strong> +92-319-4503446</div>
-          <div id="loc"><strong>Location:</strong> Sindh, Pakistan</div>
-        </div>
+## 🏅 Highlights & Achievements
+- **Aspire Leaders Program**, Harvard Business School (2024)  
+- **Dean’s List (2024–2025)** and **President’s List (2023)**, University of the People  
+- **Best Article Recognition** — *“Bridging the Gap: Aligning Physical and Cybersecurity in a Hybrid Threat Environment”*  
 
-        <div class="links">
-          <!-- Add your links as chips if you like -->
-          <!-- <a class="chip" href="https://linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a> -->
-          <!-- <a class="chip" href="https://github.com/..." target="_blank" rel="noopener">GitHub</a> -->
-          <!-- <a class="chip" href="https://scholar.google.com/..." target="_blank" rel="noopener">Google Scholar</a> -->
-        </div>
+---
 
-        <nav class="nav" id="toc">
-          <a href="#research">Research Interest</a>
-          <a href="#education">Education</a>
-          <a href="#experience">Experience</a>
-          <a href="#publications">Publications & Writing</a>
-          <a href="#awards">Honors & Awards</a>
-          <a href="#training">Professional Development & Training</a>
-          <a href="#community">Community Service</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </aside>
+## 🧠 Technical Skills
+**Programming:** C++, Python, MATLAB, SQL, JavaScript, Go, Java  
+**Machine Learning:** TensorFlow, NumPy, Pandas, Scikit-learn  
+**DevOps:** Linux/Unix, Docker, CI/CD, GitHub Actions  
+**Research Tools:** LaTeX, Jupyter Notebook, Overleaf, MATLAB Simulink  
+**Languages:** English (Advanced), Urdu (Advanced), Sindhi (Native)
 
-      <!-- RIGHT: content -->
-      <main class="right">
+---
 
-        <section id="research">
-          <div class="st"><span class="kicker"></span><h2>Research Interest</h2></div>
-          <p class="blurb">My research focuses on the development of intelligent, secure, and sustainable computing systems for reliable and high-performance digital infrastructures.</p>
-          <div class="tight">
-            <p>• Systems & Application Security</p>
-            <p>• Advanced Networking and Data Security</p>
-            <p>• Intelligent and Sustainable Computing Systems</p>
-            <p>• Security & Privacy in Distributed Environments</p>
-          </div>
-        </section>
+## 🌐 Website
+My live portfolio is hosted on GitHub Pages:  
+👉 [https://sarfaraz216.github.io](https://sarfaraz216.github.io)
 
-        <section id="education">
-          <div class="st"><span class="kicker"></span><h2>Education</h2></div>
-          <div class="tight">
-            <div class="item">
-              <div class="when">Feb 2026</div>
-              <div class="what">
-                <div class="title">BS Computer Science (CGPA: 3.72/4)</div>
-                <div class="muted">University of the People, USA</div>
-                <div class="muted">Major: Systems & Application Security, Advanced Networking and Data Security</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">Aug 2022</div>
-              <div class="what">
-                <div class="title">HSC Pre-Engineering (Grade: A1)</div>
-                <div class="muted">Government Degree College, Thul</div>
-                <div class="muted">Major: Mathematics, Physics, Chemistry</div>
-              </div>
-            </div>
-          </div>
-        </section>
+---
 
-        <section id="experience">
-          <div class="st"><span class="kicker"></span><h2>Experience</h2></div>
-          <div class="tight">
-            <div class="item">
-              <div class="when">Jul 2025 – Sep 2025</div>
-              <div class="what">
-                <div class="title">DevOps Intern — <span class="muted">Software Productivity Strategists, Inc. (SPS), NSTP Islamabad</span></div>
-                <div class="muted">Automation, CI/CD, containerized systems; Linux, cloud infrastructure, build pipelines.</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">Jun 2025 – Jul 2025</div>
-              <div class="what">
-                <div class="title">Research Trainee — <span class="muted">National University of Science and Technology (NUST), Pakistan</span></div>
-                <div class="muted">Applied ML/DL; models with Python, TensorFlow, Scikit-learn for intelligent data systems.</div>
-              </div>
-            </div>
-          </div>
-        </section>
+## 📫 Contact
+**Email:** [space.sarfaraz216@gmail.com](mailto:space.sarfaraz216@gmail.com)  
+**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
+**GitHub:** [github.com/sarfaraz216](https://github.com/sarfaraz216)
 
-        <section id="publications">
-          <div class="st"><span class="kicker"></span><h2>Publications & Writing</h2></div>
-          <div class="tight">
-            <div class="item">
-              <div class="when">2025</div>
-              <div class="what">
-                <div class="title">Sarfaraz Ahmed. “Bridging the Gap: Aligning Physical and Cybersecurity in a Hybrid Threat Environment.”</div>
-                <div class="muted">PIFFERS Security Services — Creative Writing Competition #007 (Recognized for outstanding contribution in hybrid cybersecurity)</div>
-              </div>
-            </div>
-          </div>
-        </section>
+---
 
-        <section id="awards">
-          <div class="st"><span class="kicker"></span><h2>Honors & Awards</h2></div>
-          <div class="cols-2">
-            <div class="item">
-              <div class="when">2025</div>
-              <div class="what">
-                <div class="title">Dean’s List 2024–2025</div>
-                <div class="muted">University of the People, USA</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">2023</div>
-              <div class="what">
-                <div class="title">President’s List 2023</div>
-                <div class="muted">University of the People, USA</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">Apr 2024</div>
-              <div class="what">
-                <div class="title">Aspire Leaders Program (Global Leadership)</div>
-                <div class="muted">Harvard Business School, USA</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="training">
-          <div class="st"><span class="kicker"></span><h2>Professional Development & Training</h2></div>
-          <div class="cols-2">
-            <div class="item"><div class="when">Apr–Jun 2025</div><div class="what"><div class="title">CS106A Programming Methodologies</div><div class="muted">Stanford — Code in Place</div></div></div>
-            <div class="item"><div class="when">Jan–Mar 2025</div><div class="what"><div class="title">Introduction to Kubernetes (LFS158)</div><div class="muted">Linux Foundation</div></div></div>
-            <div class="item"><div class="when">Jul–Nov 2024</div><div class="what"><div class="title">IBM Cloud Essentials</div><div class="muted">edX</div></div></div>
-            <div class="item"><div class="when">May–Jul 2024</div><div class="what"><div class="title">Data Science Foundations</div><div class="muted">Google on Coursera</div></div></div>
-            <div class="item"><div class="when">In Progress</div><div class="what"><div class="title">Machine Learning</div><div class="muted">Andrew Ng — Coursera</div></div></div>
-            <div class="item"><div class="when">In Progress</div><div class="what"><div class="title">Distributed Systems (6.824)</div><div class="muted">MIT OpenCourseWare</div></div></div>
-            <div class="item"><div class="when">In Progress</div><div class="what"><div class="title">Web Development Bootcamp</div><div class="muted">Udemy</div></div></div>
-            <div class="item"><div class="when">In Progress</div><div class="what"><div class="title">Java Network Programming</div><div class="muted">Udemy</div></div></div>
-          </div>
-        </section>
-
-        <section id="community">
-          <div class="st"><span class="kicker"></span><h2>Community Service</h2></div>
-          <div class="cols-2">
-            <div class="item">
-              <div class="when">2024–Present</div>
-              <div class="what">
-                <div class="title">Community Leader (Pakistan)</div>
-                <div class="muted">Aspire Institute — Harvard University</div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="when">2023–Present</div>
-              <div class="what">
-                <div class="title">Volunteer</div>
-                <div class="muted">International Humanitarian Aid Association (IHAA), Turkey</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills">
-          <div class="st"><span class="kicker"></span><h2>Skills</h2></div>
-          <div class="cols-3">
-            <div class="item"><div class="when"></div><div class="what"><div class="title">Programming</div><div class="muted">C++, Python, MATLAB, SQL, JavaScript, HTML, CSS, PHP, Go, Java, Bash, C</div></div></div>
-            <div class="item"><div class="when"></div><div class="what"><div class="title">Machine Learning & Data</div><div class="muted">TensorFlow, NumPy, Pandas, Scikit-learn, MATLAB Toolboxes</div></div></div>
-            <div class="item"><div class="when"></div><div class="what"><div class="title">DevOps & Systems</div><div class="muted">Linux/Unix, GitHub, CI/CD, Shell Scripting, API Integration</div></div></div>
-            <div class="item"><div class="when"></div><div class="what"><div class="title">Research Tools</div><div class="muted">LaTeX, Jupyter Notebook, Overleaf, MATLAB Simulink, Visualization Tools</div></div></div>
-            <div class="item"><div class="when"></div><div class="what"><div class="title">Languages</div><div class="muted">English (Advanced), Urdu (Advanced), Sindhi (Native)</div></div></div>
-          </div>
-        </section>
-
-        <section id="contact">
-          <div class="st"><span class="kicker"></span><h2>Contact</h2></div>
-          <p class="tight">
-            <strong>Email:</strong> <a href="mailto:space.sarfaraz216@gmail.com">space.sarfaraz216@gmail.com</a><br/>
-            <strong>Phone:</strong> +92-319-4503446<br/>
-            <strong>Location:</strong> Sindh, Pakistan
-          </p>
-        </section>
-
-        <footer>© <span id="year"></span> Sarfaraz Ahmed</footer>
-      </main>
-    </div>
-  </div>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+© 2025 Sarfaraz Ahmed — All rights reserved.
